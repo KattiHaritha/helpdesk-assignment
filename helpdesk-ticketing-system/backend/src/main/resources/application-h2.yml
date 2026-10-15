@@ -1,0 +1,9 @@
+# Run without Docker/Postgres:  mvn spring-boot:run -Dspring-boot.run.profiles=h2
+spring:
+  datasource:
+    url: jdbc:h2:mem:helpdesk;DB_CLOSE_DELAY=-1
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+jwt:
+  secret: local-h2-test-secret-change-me-0123456789

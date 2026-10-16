@@ -6,6 +6,14 @@ Kloudspot technical assessment (Project 2). Multiple organizations manage suppor
 - Backend: Java 17, Spring Boot 3.5, Spring Security (JWT), Spring Data JPA, PostgreSQL, Resend email API, JUnit 5 + Mockito, springdoc-openapi (Swagger)
 - Frontend: React 18 + TypeScript + Vite + Tailwind CSS
 
+## Application screenshots
+
+The screenshots below show the sign-in, ticket creation, and ticket conversation flows.
+
+| Sign in | Create a ticket | Ticket details and conversation |
+|---|---|---|
+| <img src="frontend/screenshots/helpdesk-login.png" alt="Helpdesk sign-in page" width="320"> | <img src="frontend/screenshots/new-ticket.png" alt="New ticket form" width="320"> | <img src="frontend/screenshots/ticket-details.png" alt="Ticket details and conversation" width="320"> |
+
 ## Project structure
 
 ```

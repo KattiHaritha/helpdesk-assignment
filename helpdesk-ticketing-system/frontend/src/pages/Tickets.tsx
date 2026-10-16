@@ -126,24 +126,24 @@ export default function Tickets() {
           <input className="input min-w-0 flex-1" aria-label="Search tickets" placeholder="Search subject..." value={searchInput} onChange={(e) => setSearchInput(e.target.value)} />
           <button className="btn-secondary">Search</button>
         </form>
-        <label className="text-xs font-semibold text-slate-500">
+        <label className="block text-xs font-semibold text-slate-500">
           Status
-          <select aria-label="Filter by status" className="input mt-1 w-40" value={status} onChange={(e) => resetPage(setStatus)(e.target.value)}>
+          <select aria-label="Filter by status" className="input mt-1 block w-40" value={status} onChange={(e) => resetPage(setStatus)(e.target.value)}>
             <option value="">All statuses</option>
             {STATUSES.map((s) => <option key={s} value={s}>{s.replace('_', ' ')}</option>)}
           </select>
         </label>
-        <label className="text-xs font-semibold text-slate-500">
+        <label className="block text-xs font-semibold text-slate-500">
           Priority
-          <select aria-label="Filter by priority" className="input mt-1 w-40" value={priority} onChange={(e) => resetPage(setPriority)(e.target.value)}>
+          <select aria-label="Filter by priority" className="input mt-1 block w-40" value={priority} onChange={(e) => resetPage(setPriority)(e.target.value)}>
             <option value="">All priorities</option>
             {PRIORITIES.map((p) => <option key={p} value={p}>{p}</option>)}
           </select>
         </label>
         {isStaff && (
-          <label className="text-xs font-semibold text-slate-500">
+          <label className="block text-xs font-semibold text-slate-500">
             Assigned to
-            <select aria-label="Filter by assigned agent" className="input mt-1 w-48" value={agentId} onChange={(e) => resetPage(setAgentId)(e.target.value)}>
+            <select aria-label="Filter by assigned agent" className="input mt-1 block w-48" value={agentId} onChange={(e) => resetPage(setAgentId)(e.target.value)}>
               <option value="">All agents</option>
               {staff.map((s) => <option key={s.id} value={s.id}>{s.name}</option>)}
             </select>

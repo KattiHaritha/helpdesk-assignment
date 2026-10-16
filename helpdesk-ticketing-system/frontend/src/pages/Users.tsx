@@ -70,14 +70,22 @@ export default function Users() {
           <h2 className="font-semibold text-slate-900">Add a team member</h2>
           <p className="mt-1 text-sm text-slate-500">Invite a colleague to your workspace.</p>
         </div>
-        <input className="input" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} required />
-        <input className="input" type="email" autoComplete="off" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-        <input className="input" type="password" autoComplete="new-password" placeholder="Password (min 8)" value={password} onChange={(e) => setPassword(e.target.value)} required minLength={8} />
-        <select className="input" value={role} onChange={(e) => setRole(e.target.value as Role)}>
-          <option value="AGENT">Support Agent</option>
-          <option value="CUSTOMER">Customer</option>
-          <option value="ORG_ADMIN">Organization Admin</option>
-        </select>
+        <label htmlFor="member-name" className="block text-xs font-semibold text-slate-600">Name
+          <input id="member-name" className="input mt-1" placeholder="e.g. Jamie Lee" value={name} onChange={(e) => setName(e.target.value)} required />
+        </label>
+        <label htmlFor="member-email" className="block text-xs font-semibold text-slate-600">Work email
+          <input id="member-email" className="input mt-1" type="email" autoComplete="off" placeholder="name@company.com" value={email} onChange={(e) => setEmail(e.target.value)} required />
+        </label>
+        <label htmlFor="member-password" className="block text-xs font-semibold text-slate-600">Temporary password
+          <input id="member-password" className="input mt-1" type="password" autoComplete="new-password" placeholder="At least 8 characters" value={password} onChange={(e) => setPassword(e.target.value)} required minLength={8} />
+        </label>
+        <label htmlFor="member-role" className="block text-xs font-semibold text-slate-600">Role
+          <select id="member-role" className="input mt-1" value={role} onChange={(e) => setRole(e.target.value as Role)}>
+            <option value="AGENT">Support Agent</option>
+            <option value="CUSTOMER">Customer</option>
+            <option value="ORG_ADMIN">Organization Admin</option>
+          </select>
+        </label>
         {error && <p className="rounded bg-red-50 px-3 py-2 text-sm text-red-700">{error}</p>}
         <button className="btn w-full">Create user</button>
       </form>
